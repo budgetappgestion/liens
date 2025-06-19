@@ -1,106 +1,191 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liens</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
+  <title>BudgetApp - Gérer votre budget simplement</title>
 
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
+  <!-- 🔍 SEO Meta Tags -->
+  <meta name="description" content="Gérez facilement vos finances avec BudgetApp. Suivi de budget, export PDF/Excel, visualisation par catégories. Disponible sur Android et iOS.">
+  <meta name="keywords" content="budget, application budget, gestion argent, finances personnelles, Android, iOS, BudgetApp, dépenses, épargne">
+  <meta name="author" content="BudgetApp">
 
-        h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        p {
-            margin-bottom: 30px;
-            color: #555;
-        }
+  <!-- 🌐 Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="BudgetApp - Gérez votre argent simplement">
+  <meta property="og:description" content="Téléchargez BudgetApp et reprenez le contrôle de vos finances. Disponible sur Android et iOS.">
+  <meta property="og:image" content="https://votresite.com/images/apercu.jpg"> <!-- Remplacez par une image hébergée -->
+  <meta property="og:url" content="https://votresite.com">
+  <meta property="og:type" content="website">
 
-        .app-links {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-        }
+  <!-- 🐦 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BudgetApp - Application de gestion de budget">
+  <meta name="twitter:description" content="Suivez vos dépenses et optimisez vos finances avec BudgetApp. Disponible sur Android et iOS.">
+  <meta name="twitter:image" content="https://votresite.com/images/apercu.jpg"> <!-- Remplacez -->
 
-        .app-links a {
-            text-decoration: none;
-            color: white;
-            background-color: #4CAF50;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .app-links a:hover {
-            background-color: #45a049;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
 
-        .app-links a.apple {
-            background-color: #007aff;
-        }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .app-links a.apple:hover {
-            background-color: #0066d6;
-        }
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
 
-        @media (min-width: 600px) {
-            .app-links {
-                flex-direction: row;
-            }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      color: #555;
+    }
 
-            .app-links a {
-                margin: 0;
-                margin-left: 10px;
-                width: 48%;
-            }
+    .app-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
 
-            .app-links a:first-child {
-                margin-left: 0;
-            }
-        }
-    </style>
+    .app-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 15px 25px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      width: 250px;
+      text-align: center;
+    }
+
+    .app-links a.android {
+      background-color: #4caf50;
+    }
+
+    .app-links a.android:hover {
+      background-color: #45a049;
+    }
+
+    .app-links a.ios {
+      background-color: #007aff;
+    }
+
+    .app-links a.ios:hover {
+      background-color: #0066cc;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-size: 1.5em;
+    }
+
+    .section p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .screenshots img {
+      max-width: 100%;
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .tiktok {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .tiktok a {
+      color: #ee1d52;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+
+    .tiktok a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .app-links a {
+        width: 100%;
+      }
+
+      .screenshots img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>BudgetApp 📊</h1>
+    <p class="subtitle">Gérez vos finances mensuelles avec simplicité et efficacité</p>
 
-    <div class="container">
-        <h1>Les liens</h1>
-        <p>Téléchargez notre application sur votre appareil préféré :</p>
-        <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.gestion.budgetapp" target="_blank">Télécharger pour Android</a>
-            <a class="apple" href="https://apps.apple.com/app/budget-gestion/id6743094157" target="_blank">Télécharger pour iOS</a>
-        </div>
+    <div class="app-links">
+      <a href="https://play.google.com/store/apps/details?id=com.gestion.budgetapp" target="_blank" class="android">📱 Télécharger pour Android</a>
+      <a href="https://apps.apple.com/app/budget-gestion/id6743094157" target="_blank" class="ios">🍏 Télécharger pour iOS</a>
     </div>
 
+    <div class="section">
+      <h2>Fonctionnalités principales</h2>
+      <p>
+        💶 Entrez votre salaire, répartissez vos dépenses par catégorie, suivez vos sous-catégories en temps réel.  
+       <!-- Exportez vos données au format PDF ou Excel et visualisez votre budget avec des graphiques camemberts dynamiques. -->
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>📱 Aperçu de l'application</h2>
+      <div class="screenshots">
+        <img src="s1.png" alt="Capture Android 1" />
+        <img src="s2.png" alt="Capture Android 2" />
+        <img src="/s3.png" alt="Capture iOS 1" />
+        <img src="./s4.png" alt="Capture iOS 2" />
+      </div>
+    </div>
+
+    <div class="tiktok">
+      <p>🎥 Découvre BudgetApp sur TikTok :</p>
+      <a href="https://www.tiktok.com/@budget.app.gestion?_t=ZN-8xLFBcmVui6&_r=1" target="_blank">
+        @budget.app.gestion sur TikTok
+      </a>
+    </div>
+  </div>
 </body>
 </html>
