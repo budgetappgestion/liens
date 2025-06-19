@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Page principale -->
+  <url>
+    <loc>https://votresite.com/</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Page Android (optionnel si séparée) -->
+  <url>
+    <loc>https://play.google.com/store/apps/details?id=com.gestion.budgetapp</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page iOS (optionnel si séparée) -->
+  <url>
+    <loc>https://apps.apple.com/app/budget-gestion/id6743094157</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page TikTok (optionnel pour la visibilité extérieure) -->
+  <url>
+    <loc>https://www.tiktok.com/@budget.app.gestion</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
